@@ -1,44 +1,56 @@
-# JZRD ThermalPredict
+# JZRD ThermoPredict
 
-## Machine Learning-Assisted Thermal Conductivity Estimation
+### Thermal Materials Research & Analysis Workspace
 
-JZRD ThermalPredict is a research prototype that estimates the thermal conductivity of polymer composites using a trained ExtraTrees regression model.
-
-**Live Demo:** https://jzrd-thermalpredict-teju.streamlit.app/
-
-## Project Overview
-
-This project combines machine learning with an interactive web application to explore thermal conductivity estimation from material properties.
+JZRD ThermoPredict is a scientific research prototype designed to explore thermal transport properties in nanoreinforced polymer composites.
 
 ## Features
 
-* Interactive material-property inputs
-* ExtraTrees regression model
-* Model-validation visualizations
-* Streamlit-based interface
+* 🌿 Green research dashboard
+* 🧪 Material configuration workspace
+* 📊 Thermal property analysis interface
+* 📈 Parameter study and visualization
+* 🔬 Experimental validation workspace
+* 💻 JZRD Scientific Studio
+* 📁 Dataset preparation workspace
 
 ## Technology Stack
 
+* HTML5
+* CSS3
+* JavaScript
 * Python
-* Scikit-learn
-* Pandas and NumPy
-* Matplotlib
 * Streamlit
-* Joblib
+* Scikit-learn
 
-## Model Workflow
+## Project Structure
 
-1. Prepare the available material dataset.
-2. Process the input features.
-3. Train the regression model.
-4. Save and load the trained model.
-5. Generate thermal conductivity estimates.
-6. Review the available validation results.
+```text
+JZRD-ThermalPredict/
+├── index.html
+├── style.css
+├── script.js
+├── app.py
+├── requirements.txt
+├── models/
+└── README.md
+```
 
-## Limitations
+## Deployment
 
-Predictions are computational estimates, not experimental measurements. The current model does not support temperature-dependent predictions. Model reliability depends on the dataset and validation methodology.
+The web interface is designed for deployment as a static website using Render.
 
-## Disclaimer
+The Python-based model application can be deployed separately and connected to the interface through an API.
 
-This project is intended for research and educational exploration. Predictions should not replace experimental measurements or validated engineering analysis.
+## Research Scope
+
+This project explores machine-learning-assisted analysis of thermal transport properties in nanoreinforced polymer composites.
+
+Predictions and validation metrics should be interpreted according to the available model, training data, and experimental evidence.
+
+## Status
+
+**Research Prototype — In Development**
+
+Developed as part of the JZRD scientific computing project.
+
