@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JZRD ThermoPredict | Thermal Materials Research</title>
+
+    <meta name="description"
+          content="JZRD ThermoPredict — scientific platform for thermal transport analysis and material prediction.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ======================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            J
+        </div>
+
+        <div class="brand-text">
+            <strong>JZRD</strong>
+            <span>ThermoPredict</span>
+        </div>
+
+    </div>
+
+
+    <div class="workspace-label">
+        WORKSPACE
+    </div>
+
+
+    <nav class="navigation">
+
+        <button class="nav-item active" data-section="dashboard">
+            <span class="nav-icon">⌂</span>
+            <span>Overview</span>
+        </button>
+
+        <button class="nav-item" data-section="predictor">
+            <span class="nav-icon">◈</span>
+            <span>Material Predictor</span>
+        </button>
+
+        <button class="nav-item" data-section="simulation">
+            <span class="nav-icon">⌁</span>
+            <span>Parameter Study</span>
+        </button>
+
+        <button class="nav-item" data-section="analytics">
+            <span class="nav-icon">◫</span>
+            <span>Analysis</span>
+        </button>
+
+        <button class="nav-item" data-section="validation">
+            <span class="nav-icon">✓</span>
+            <span>Validation</span>
+        </button>
+
+        <button class="nav-item" data-section="studio">
+            <span class="nav-icon">{ }</span>
+            <span>JZRD Studio</span>
+        </button>
+
+        <button class="nav-item" data-section="dataset">
+            <span class="nav-icon">▤</span>
+            <span>Dataset Lab</span>
+        </button>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+
+            <div>
+                <strong>System Ready</strong>
+                <small>Local research environment</small>
+            </div>
+        </div>
+
+        <div class="version">
+            JZRD Runtime · v0.1
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================================
+     MAIN APPLICATION
+========================================================= -->
+
+<main class="main">
+
+    <!-- TOP HEADER -->
+
+    <header class="top-header">
+
+        <div class="breadcrumb">
+
+            <span>Research Workspace</span>
+
+            <span class="separator">/</span>
+
+            <strong>ThermoPredict</strong>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <span class="environment">
+                LOCAL
+            </span>
+
+            <span class="header-status">
+                <i></i>
+                Ready
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         OVERVIEW
+    ====================================================== -->
+
+    <section id="dashboard" class="page-section">
+
+        <div class="welcome">
+
+            <div class="welcome-content">
+
+                <div class="section-kicker">
+                    THERMAL MATERIALS RESEARCH
+                </div>
+
+                <h1>
+                    Thermal transport
+                    <span>analysis workspace.</span>
+                </h1>
+
+                <p>
+                    Model nanoreinforced polymer composites, evaluate
+                    thermal properties, explore material parameters and
+                    compare predicted behaviour within a single research
+                    workflow.
+                </p>
+
+
+                <div class="welcome-actions">
+
+                    <button class="button button-primary"
+                            id="startPrediction">
+
+                        New Material Analysis
+
+                    </button>
+
+                    <button class="button button-secondary"
+                            data-section="studio">
+
+                        Open JZRD Studio
+
+                    </button>
+
+                </div>
+
+
+                <div class="research-note">
+
+                    <span>●</span>
+
+                    Scientific computing environment
+
+                    <span class="note-divider">|</span>
+
+                    Thermal transport
+
+                    <span class="note-divider">|</span>
+
+                    Composite materials
+
+                </div>
+
+            </div>
+
+
+            <!-- MATERIAL VISUAL -->
+
+            <div class="material-display">
+
+                <div class="display-header">
+
+                    <span>Material Model</span>
+
+                    <span class="display-live">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="material-stage">
+
+                    <div class="ring ring-one"></div>
+
+                    <div class="ring ring-two"></div>
+
+                    <div class="ring ring-three"></div>
+
+                    <div class="material-core">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="particle particle-one"></div>
+                    <div class="particle particle-two"></div>
+                    <div class="particle particle-three"></div>
+                    <div class="particle particle-four"></div>
+                    <div class="particle particle-five"></div>
+
+                </div>
+
+
+                <div class="material-caption">
+
+                    <strong>Nanoreinforced Composite</strong>
+
+                    <span>
+                        Polymer matrix · dispersed nano phase
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUMMARY -->
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-kicker">
+                    CURRENT ANALYSIS
+                </span>
+
+                <h2>
+                    Thermal properties
+                </h2>
+            </div>
+
+            <span class="analysis-state">
+                No material selected
+            </span>
+
+        </div>
+
+
+        <div class="summary-grid">
+
+            <article class="summary-card">
+
+                <div class="summary-top">
+                    <span>Thermal Conductivity</span>
+                    <span class="card-symbol">k</span>
+                </div>
+
+                <strong id="overviewConductivity">
+                    —
+                </strong>
+
+                <small>
+                    W/m·K
+                </small>
+
+            </article>
+
+
+            <article class="summary-card">
+
+                <div class="summary-top">
+                    <span>Thermal Diffusivity</span>
+                    <span class="card-symbol">α</span>
+                </div>
+
+                <strong id="overviewDiffusivity">
+                    —
+                </strong>
+
+                <small>
+                    mm²/s
+                </small>
+
+            </article>
+
+
+            <article class="summary-card">
+
+                <div class="summary-top">
+                    <span>Specific Heat</span>
+                    <span class="card-symbol">Cp</span>
+                </div>
+
+                <strong id="overviewSpecificHeat">
+                    —
+                </strong>
+
+                <small>
+                    J/kg·K
+                </small>
+
+            </article>
+
+
+            <article class="summary-card summary-card-highlight">
+
+                <div class="summary-top">
+                    <span>Model Confidence</span>
+                    <span class="card-symbol">%</span>
+                </div>
+
+                <strong id="overviewConfidence">
+                    —
+                </strong>
+
+                <small>
+                    prediction confidence
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MATERIAL PREDICTOR
+    ====================================================== -->
+
+    <section id="predictor" class="page-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    MATERIAL MODEL
+                </span>
+
+                <h2>
+                    Composite configuration
+                </h2>
+
+                <p>
+                    Define the material composition and operating
+                    conditions used for the thermal analysis.
+                </p>
+
+            </div>
+
+            <span class="section-number">
+                01
+            </span>
+
+        </div>
+
+
+        <div class="workspace-grid">
+
+
+            <!-- INPUT PANEL -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            MATERIAL INPUT
+                        </span>
+
+                        <h3>
+                            Composition & Conditions
+                        </h3>
+
+                    </div>
+
+                    <span class="card-status">
+                        INPUT
+                    </span>
+
+                </div>
+
+
+                <div class="card-body">
+
+                    <div class="input-grid">
+
+
+                        <div class="field">
+
+                            <label for="polymer">
+                                Polymer matrix
+                            </label>
+
+                            <select id="polymer">
+
+                                <option value="Epoxy">
+                                    Epoxy
+                                </option>
+
+                                <option value="PEEK">
+                                    PEEK
+                                </option>
+
+                                <option value="Polyamide">
+                                    Polyamide
+                                </option>
+
+                                <option value="Polyurethane">
+                                    Polyurethane
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="nanoparticle">
+                                Nanoparticle
+                            </label>
+
+                            <select id="nanoparticle">
+
+                                <option value="Al2O3">
+                                    Aluminium Oxide (Al₂O₃)
+                                </option>
+
+                                <option value="BN">
+                                    Boron Nitride (BN)
+                                </option>
+
+                                <option value="Graphene">
+                                    Graphene
+                                </option>
+
+                                <option value="SiC">
+                                    Silicon Carbide (SiC)
+                                </option>
+
+                                <option value="TiO2">
+                                    Titanium Dioxide (TiO₂)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <div class="field-label">
+
+                                <label for="concentration">
+                                    Nanoparticle concentration
+                                </label>
+
+                                <output id="concentrationValue">
+                                    5 %
+                                </output>
+
+                            </div>
+
+                            <input
+                                id="concentration"
+                                type="range"
+                                min="0"
+                                max="20"
+                                step="0.5"
+                                value="5">
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <div class="field-label">
+
+                                <label for="particleSize">
+                                    Particle size
+                                </label>
+
+                                <output id="particleSizeValue">
+                                    40 nm
+                                </output>
+
+                            </div>
+
+                            <input
+                                id="particleSize"
+                                type="range"
+                                min="10"
+                                max="200"
+                                step="5"
+                                value="40">
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <div class="field-label">
+
+                                <label for="temperature">
+                                    Operating temperature
+                                </label>
+
+                                <output id="temperatureValue">
+                                    300 K
+                                </output>
+
+                            </div>
+
+                            <input
+                                id="temperature"
+                                type="range"
+                                min="250"
+                                max="500"
+                                step="5"
+                                value="300">
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <div class="field-label">
+
+                                <label for="dispersion">
+                                    Dispersion quality
+                                </label>
+
+                                <output id="dispersionValue">
+                                    80 %
+                                </output>
+
+                            </div>
+
+                            <input
+                                id="dispersion"
+                                type="range"
+                                min="40"
+                                max="100"
+                                value="80">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            class="button button-primary"
+                            id="runPrediction">
+
+                            Evaluate Material
+
+                        </button>
+
+                        <button
+                            class="button button-secondary"
+                            id="resetPrediction">
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULT PANEL -->
+
+            <div class="card result-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            ANALYSIS RESULT
+                        </span>
+
+                        <h3>
+                            Predicted thermal response
+                        </h3>
+
+                    </div>
+
+                    <span
+                        class="card-status"
+                        id="predictionStatus">
+
+                        READY
+
+                    </span>
+
+                </div>
+
+
+                <div class="card-body">
+
+
+                    <div class="primary-result">
+
+                        <span>
+                            Thermal Conductivity
+                        </span>
+
+                        <strong id="thermalConductivity">
+                            —
+                        </strong>
+
+                        <small>
+                            W/m·K
+                        </small>
+
+                    </div>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-item">
+
+                            <span>
+                                Thermal Diffusivity
+                            </span>
+
+                            <strong id="thermalDiffusivity">
+                                —
+                            </strong>
+
+                            <small>
+                                mm²/s
+                            </small>
+
+                        </div>
+
+
+                        <div class="result-item">
+
+                            <span>
+                                Specific Heat
+                            </span>
+
+                            <strong id="specificHeat">
+                                —
+                            </strong>
+
+                            <small>
+                                J/kg·K
+                            </small>
+
+                        </div>
+
+
+                        <div class="result-item">
+
+                            <span>
+                                Performance Index
+                            </span>
+
+                            <strong id="performanceIndex">
+                                —
+                            </strong>
+
+                            <small>
+                                / 100
+                            </small>
+
+                        </div>
+
+
+                        <div class="result-item">
+
+                            <span>
+                                Estimated Error
+                            </span>
+
+                            <strong id="estimatedError">
+                                —
+                            </strong>
+
+                            <small>
+                                %
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="confidence-block">
+
+                        <div class="confidence-heading">
+
+                            <span>
+                                Prediction confidence
+                            </span>
+
+                            <strong id="confidenceValue">
+                                —
+                            </strong>
+
+                        </div>
+
+                        <div class="confidence-track">
+
+                            <span id="confidenceBar"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analysis-message"
+                         id="analysisMessage">
+
+                        Configure a material to begin the analysis.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================================
+         JZRD TRAINED ML MODEL
+    ====================================================== -->
+
+    <section id="trained-model" class="page-section">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">JZRD ? MACHINE LEARNING</span>
+                <h2>Trained ExtraTrees Model</h2>
+                <p>Predict composite thermal conductivity using the six features expected by the trained model.</p>
+            </div>
+            <span class="section-number">ML</span>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <span class="card-kicker">MODEL INPUTS</span>
+                    <h3>Material Parameters</h3>
+                </div>
+                <span class="card-status">EXTRATREES</span>
+            </div>
+
+            <div class="card-body">
+                <div class="input-grid">
+
+                    <div class="field">
+                        <label for="ml-Vf">Vf ? Filler volume fraction</label>
+                        <input id="ml-Vf" type="number" min="0.01" max="0.75" step="any" value="0.03" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="ml-omega">? ? Filler weight fraction</label>
+                        <input id="ml-omega" type="number" min="0.01" max="0.91" step="any" value="0.04" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="ml-diameter">2r ? Particle diameter (m)</label>
+                        <input id="ml-diameter" type="number" min="3e-8" max="0.0007" step="any" value="0.000002" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="ml-km">km ? Matrix thermal conductivity</label>
+                        <input id="ml-km" type="number" min="0.14" max="401" step="any" value="0.27" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="ml-kf">kf ? Filler thermal conductivity</label>
+                        <input id="ml-kf" type="number" min="20" max="2400" step="any" value="60" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="ml-Ri">Ri ? Interfacial thermal resistance</label>
+                        <input id="ml-Ri" type="number" min="4.39e-9" max="0.000014" step="any" value="9.4e-7" required>
+                    </div>
+
+                </div>
+
+                <p class="analysis-message">
+                    Enter values using the same definitions and units as the model's source dataset.
+                    Dataset-wide ranges are shown as input bounds; they do not guarantee every combination is physically valid.
+                </p>
+
+                <button class="button button-primary" id="runTrainedModel" type="button">
+                    Predict with Trained Model
+                </button>
+
+                <div id="trainedModelStatus" class="analysis-message" role="status" aria-live="polite">
+                    Ready to connect to the local JZRD API.
+                </div>
+
+                <div id="trainedModelResult" class="analysis-message" aria-live="polite">
+                    Prediction will appear here.
+                </div>
+
+                <small>
+                    Research estimate only; not an experimental measurement or a validated material recommendation.
+                </small>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         PARAMETER STUDY
+    ====================================================== -->
+
+    <section id="simulation" class="page-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    PARAMETER STUDY
+                </span>
+
+                <h2>
+                    What-if analysis
+                </h2>
+
+                <p>
+                    Examine how nanoparticle concentration affects
+                    predicted thermal conductivity.
+                </p>
+
+            </div>
+
+            <button
+                class="button button-secondary"
+                id="runSimulation">
+
+                Run Parameter Study
+
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-kicker">
+                        RESPONSE PROFILE
+                    </span>
+
+                    <h3>
+                        Concentration vs thermal conductivity
+                    </h3>
+
+                </div>
+
+                <span class="card-status">
+                    ANALYSIS
+                </span>
+
+            </div>
+
+
+            <div class="card-body">
+
+                <div
+                    class="simulation-chart"
+                    id="simulationChart">
+
+                    <div class="chart-placeholder">
+
+                        <strong>
+                            No parameter study has been run.
+                        </strong>
+
+                        <span>
+                            Select “Run Parameter Study” to generate
+                            the response profile.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="simulation-values"
+                    id="simulationValues">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ANALYTICS
+    ====================================================== -->
+
+    <section id="analytics" class="page-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    MODEL ANALYSIS
+                </span>
+
+                <h2>
+                    Interpretation
+                </h2>
+
+                <p>
+                    Understand which material parameters influence
+                    the prediction.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workspace-grid">
+
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            FEATURE CONTRIBUTION
+                        </span>
+
+                        <h3>
+                            Parameter importance
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="card-body"
+                    id="featureImportance">
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            INTERPRETATION
+                        </span>
+
+                        <h3>
+                            Prediction context
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-body">
+
+                    <div
+                        class="explanation"
+                        id="predictionExplanation">
+
+                        Run a material analysis to view
+                        parameter interpretation.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VALIDATION
+    ====================================================== -->
+
+    <section id="validation" class="page-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    EXPERIMENTAL VALIDATION
+                </span>
+
+                <h2>
+                    Compare against measured data
+                </h2>
+
+                <p>
+                    Import experimental observations and evaluate
+                    prediction accuracy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workspace-grid">
+
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            DATA IMPORT
+                        </span>
+
+                        <h3>
+                            Experimental dataset
+                        </h3>
+
+                    </div>
+
+                    <span class="card-status">
+                        CSV
+                    </span>
+
+                </div>
+
+
+                <div class="card-body">
+
+                    <label class="upload-area">
+
+                        <input
+                            type="file"
+                            id="datasetFile"
+                            accept=".csv">
+
+                        <span class="upload-icon">
+                            ↑
+                        </span>
+
+                        <strong>
+                            Import experimental data
+                        </strong>
+
+                        <small>
+                            CSV files containing measured
+                            thermal properties
+                        </small>
+
+                    </label>
+
+
+                    <div
+                        class="file-status"
+                        id="fileStatus">
+
+                        No dataset loaded.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            MODEL QUALITY
+                        </span>
+
+                        <h3>
+                            Validation metrics
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-body validation-grid">
+
+                    <div>
+                        <span>MAE</span>
+                        <strong id="metricMAE">—</strong>
+                    </div>
+
+                    <div>
+                        <span>RMSE</span>
+                        <strong id="metricRMSE">—</strong>
+                    </div>
+
+                    <div>
+                        <span>R²</span>
+                        <strong id="metricR2">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Error</span>
+                        <strong id="metricError">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JZRD STUDIO
+    ====================================================== -->
+
+    <section id="studio" class="page-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    JZRD PROGRAMMING ENVIRONMENT
+                </span>
+
+                <h2>
+                    Scientific Studio
+                </h2>
+
+                <p>
+                    Define a material analysis using the JZRD
+                    scientific programming syntax.
+                </p>
+
+            </div>
+
+            <button
+                class="button button-primary"
+                id="runJZRD">
+
+                Run Program
+
+            </button>
+
+        </div>
+
+
+        <div class="studio-layout">
+
+
+            <div class="code-window">
+
+                <div class="window-header">
+
+                    <span>
+                        thermo.jzrd
+                    </span>
+
+                    <span>
+                        JZRD
+                    </span>
+
+                </div>
+
+
+                <textarea id="jzrdCode">material polymer "Epoxy"
+nanoparticle "Al2O3"
+
+concentration 5
+particle_size 40
+temperature 300
+dispersion 80
+
+predict thermal_conductivity
+predict thermal_diffusivity
+predict specific_heat</textarea>
+
+            </div>
+
+
+            <div class="terminal-window">
+
+                <div class="window-header">
+
+                    <span>
+                        Runtime
+                    </span>
+
+                    <span>
+                        JZRD VM
+                    </span>
+
+                </div>
+
+
+                <pre id="runtimeOutput">JZRD ThermoPredict
+Scientific Runtime
+
+Status: READY
+
+Lexer        —
+Parser       —
+JIR          —
+Virtual VM   —
+ThermoPredict —
+
+Waiting for program execution...</pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="pipeline">
+
+            <div>LEXER</div>
+            <span>→</span>
+            <div>PARSER</div>
+            <span>→</span>
+            <div>JIR</div>
+            <span>→</span>
+            <div>VM</div>
+            <span>→</span>
+            <div>THERMOPREDICT</div>
+            <span>→</span>
+            <div>MODEL</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DATASET LAB
+    ====================================================== -->
+
+    <section id="dataset" class="page-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    DATA ENGINEERING
+                </span>
+
+                <h2>
+                    Dataset Lab
+                </h2>
+
+                <p>
+                    Prepare experimental data for model development
+                    and validation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="dataset-grid">
+
+
+            <article class="dataset-card">
+
+                <span class="dataset-number">
+                    01
+                </span>
+
+                <h3>
+                    Data Quality
+                </h3>
+
+                <p>
+                    Inspect missing values, invalid measurements,
+                    duplicate records and inconsistent units.
+                </p>
+
+            </article>
+
+
+            <article class="dataset-card">
+
+                <span class="dataset-number">
+                    02
+                </span>
+
+                <h3>
+                    Feature Preparation
+                </h3>
+
+                <p>
+                    Convert material composition and operating
+                    conditions into model-ready variables.
+                </p>
+
+            </article>
+
+
+            <article class="dataset-card">
+
+                <span class="dataset-number">
+                    03
+                </span>
+
+                <h3>
+                    Model Evaluation
+                </h3>
+
+                <p>
+                    Separate training and validation observations
+                    to assess prediction performance.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESEARCH FOOTER
+    ====================================================== -->
+
+    <section class="research-panel">
+
+        <div>
+
+            <span class="section-kicker">
+                JZRD THERMOPREDICT
+            </span>
+
+            <h2>
+                From material definition to
+                validated thermal insight.
+            </h2>
+
+            <p>
+                A unified scientific workflow connecting material
+                modeling, prediction, parameter studies, analysis
+                and experimental validation.
+            </p>
+
+        </div>
+
+
+        <div class="research-flow">
+
+            <span>DEFINE</span>
+            <i>→</i>
+            <span>PREDICT</span>
+            <i>→</i>
+            <span>ANALYZE</span>
+            <i>→</i>
+            <span>VALIDATE</span>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <span>
+            JZRD ThermoPredict
+        </span>
+
+        <span>
+            Scientific Computing Environment · Research Prototype
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
