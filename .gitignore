@@ -1,0 +1,6 @@
+/target
+/.vs/
+__pycache__/
+.venv/
+venv/
+.env
