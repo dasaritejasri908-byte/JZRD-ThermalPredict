@@ -1,45 +1,77 @@
-# JZRD ThermalPredict
+# 🔬 JZRD ThermoPredict
 
-## Machine Learning-Assisted Thermal Conductivity Estimation
+### Exploring Thermal Transport in Nanoreinforced Polymer Composites
 
-JZRD ThermalPredict is a research prototype that estimates the thermal conductivity of polymer composites using a trained ExtraTrees regression model.
+JZRD ThermoPredict is a scientific computing project focused on exploring thermal transport properties in nanoreinforced polymer composites through an interactive web interface.
 
-**Live Demo:** https://jzrd-thermalpredict-teju.streamlit.app/
+🌐 **Live Demo:** https://jzrd-thermalpredict-1.onrender.com/
 
-## Project Overview
+---
 
-This project combines machine learning with an interactive web application to explore thermal conductivity estimation from material properties.
+## 🎯 Project Overview
 
-## Features
+Thermal conductivity is an important property in the design and analysis of advanced polymer composites. Understanding how material composition, nanoparticle characteristics, and temperature relate to thermal transport can support materials research.
 
-* Interactive material-property inputs
-* ExtraTrees regression model
-* Model-validation visualizations
-* Streamlit-based interface
+JZRD ThermoPredict provides a web-based interface for exploring these parameters and examining thermal transport estimates.
 
-## Technology Stack
+## ✨ Features
 
-* Python
-* Scikit-learn
-* Pandas and NumPy
-* Matplotlib
-* Streamlit
-* Joblib
+* 🧪 Polymer and nanoparticle selection
+* 📏 Particle-size parameter input
+* 🌡️ Temperature-based exploration
+* ⚙️ Interactive simulation interface
+* 📊 Thermal transport analysis and visualization
+* 🌐 Publicly accessible web deployment
 
-## Model Workflow
+*Feature availability and calculation methods depend on the current implementation.*
 
-1. Prepare the available material dataset.
-2. Process the input features.
-3. Train the regression model.
-4. Save and load the trained model.
-5. Generate thermal conductivity estimates.
-6. Review the available validation results.
+## 🛠️ Technology Stack
 
-## Limitations
+* **Frontend:** HTML, CSS, JavaScript
+* **Deployment:** Render
+* **Version Control:** Git and GitHub
 
-Predictions are computational estimates, not experimental measurements. The current model does not support temperature-dependent predictions. Model reliability depends on the dataset and validation methodology.
+Additional technologies and model details can be documented as the implementation is verified.
 
-## Disclaimer
+## 🚀 Live Demo
 
-This project is intended for research and educational exploration. Predictions should not replace experimental measurements or validated engineering analysis.
+Explore the deployed project:
+
+**https://jzrd-thermalpredict-1.onrender.com/**
+
+## 🔬 Research Focus
+
+**Topic:** Deep Learning-Assisted Prediction of Thermal Transport Properties in Nanoreinforced Polymer Composites.
+
+The project explores how computational tools can support the investigation of thermal properties in composite materials.
+
+## 📌 Limitations
+
+* Computational outputs should not be interpreted as experimentally validated measurements.
+* Prediction accuracy depends on the underlying model, data quality, and validation methodology.
+* Further testing and validation are necessary before using outputs for scientific or engineering decisions.
+
+## 🔮 Future Improvements
+
+* Integrate and validate a suitable predictive model.
+* Document the dataset and data-processing methodology.
+* Evaluate model performance using appropriate metrics.
+* Improve scientific visualizations and user experience.
+* Expand documentation and testing.
+
+## 👩‍💻 Author
+
+**Tejasri Dasari**
+
+B.Tech — Artificial Intelligence and Machine Learning
+
+## ⭐ Feedback
+
+Suggestions, feedback, and contributions that help improve this project are welcome.
+
+If you find this project interesting, consider starring the repository!
+
+
+
+*B*
 
