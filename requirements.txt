@@ -1,4 +1,6 @@
-streamlit
+text
+fastapi
+uvicorn
 pandas
 numpy
 scikit-learn
