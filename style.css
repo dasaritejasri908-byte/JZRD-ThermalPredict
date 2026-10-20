@@ -1762,44 +1762,42 @@ textarea {
         flex-wrap: wrap;
     }
 
-    .footer {
-        padding: 25px 20px;
+   /* JZRD ThermoPredict — Developer Credit */
 
-        flex-direction: column;
-        gap: 7px;
-    }
-
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 24px 16px;
+    text-align: center;
 }
 
+.footer-project {
+    font-size: 16px;
+    font-weight: 700;
+}
 
-@media (max-width: 520px) {
+.footer-description {
+    font-size: 13px;
+    color: #aebdca;
+}
 
-    .header-right {
-        display: none;
-    }
+.developer-credit {
+    margin-top: 8px;
+    color: #aebdca;
+    font-size: 14px;
+}
 
-    .summary-grid {
-        grid-template-columns: 1fr;
-    }
+.developer-credit strong {
+    color: #ffffff;
+    font-weight: 700;
+}
 
-    .welcome-actions {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .section-heading {
-        flex-direction: column;
-    }
-
-    .navigation {
-        grid-template-columns: 1fr;
-    }
-
-    .research-panel {
-        padding: 28px 22px;
-    }
-
+.copyright {
+    margin-top: 2px;
+    color: #8493a3;
+    font-size: 11px;
 }
